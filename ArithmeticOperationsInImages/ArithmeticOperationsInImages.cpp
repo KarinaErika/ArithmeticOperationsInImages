@@ -50,6 +50,11 @@ int main(int argc, const char * argv[]) {
 
 	String imageNameA("data/robo.jpg");
 
+
+		/*String imageNameB("C:/Users/Karina/source/repos/SegmentationHardExudatosPI/SegmentationHardExudatosPI/teste/IDRiD_01.jpg");
+
+		String imageNameA("C:/Users/Karina/source/repos/SegmentationHardExudatosPI/SegmentationHardExudatosPI/teste/IDRiD_01_OD.tif");*/
+
 	// Ler imagens 
 	imgB = imread(imageNameA, IMREAD_GRAYSCALE);
 	imgA = imread(imageNameB, IMREAD_GRAYSCALE);
@@ -539,7 +544,7 @@ void escalar(Mat imgA, int valor) {
 //Pega maior valor de uma matriz
 int maior(vector<vector<float>> mat, Mat imgA, Mat imgB) {
 
-	int maior = 0;
+	int maior = mat[0][0];
 
 	for (int row = 0; row < imgA.rows; row++) {
 		for (int col = 0; col < imgA.cols; col++) {
@@ -555,7 +560,7 @@ int maior(vector<vector<float>> mat, Mat imgA, Mat imgB) {
 //Pega menor valor de uma matriz
 int menor(vector<vector<float>> mat, Mat imgA, Mat imgB) {
 
-	int menor = 0;
+	int menor = mat[0][0];
 
 	for (int row = 0; row < imgA.rows; row++) {
 		for (int col = 0; col < imgA.cols; col++) {
@@ -583,4 +588,4 @@ int formaDireta(int k) {
 
 
 
-//https://agostinhobritojr.github.io/tutorial/pdi/
+//https://agostinhobritojr.github.io/tutorial/pdi/zx
